@@ -26,9 +26,10 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         node-version: 12
-    - uses: borales/action-yarn@v2.0.0
-      with: 
-        cmd: install 
+        
+    - uses: borales/actions-yarn@v2.0.0
+      with:
+          cmd: install # will run `yarn install` command
         
     - name: Build Ract App
       run: yarn build
